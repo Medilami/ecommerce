@@ -2,209 +2,77 @@
 <html lang="en">
 
 <head>
-
           <meta charset="UTF-8">
-
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-          <title>Medilami Shop</title>
-
+          <title>Medilamishop - Your Online Store</title>
           <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
-
-
-          <!-- NAVBAR -->
-
+          <!-- Header / Navigation -->
           <header>
-
-                    <nav class="navbar">
-
-                              <h1>Medilami Shop</h1>
-
-                    </nav>
-
+                    <div class="container">
+                              <div class="logo">
+                                        <h1> Medilamishop </h1>
+                              </div>
+                              <nav>
+                                        <a href="index.html" class="active">Home</a>
+                                        <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+                              </nav>
+                    </div>
           </header>
 
-
-
-          <!-- HERO SECTION -->
-
+          <!-- Hero Section -->
           <section class="hero">
-
-                    <h2>Welcome To Medilami Shop</h2>
-
-                    <p>
-                              Discover electronics, clothing, and accessories
-                              at affordable prices.
-                    </p>
-
+                    <div class="container">
+                              <h2>Welcome To Medilamishop</h2>
+                              <p>Discover electronics, clothing, and accessories at affordable prices.</p>
+                    </div>
           </section>
 
-
-
-          <!-- ABOUT SECTION -->
-
-          <section class="about">
-
-                    <h2>About Medilami Shop</h2>
-
-                    <p>
-                              Welcome to Medilami Shop, your trusted online
-                              destination for electronics, clothing, and
-                              accessories.
-                    </p>
-
-                    <p>
-                              Browse products easily and manage your shopping
-                              cart smoothly on any device.
-                    </p>
-
-          </section>
-
-
-
-          <!-- CATEGORY SECTION -->
-
+          <!-- Categories Section -->
           <section class="categories">
-
-                    <button class="category-btn" data-category="all">
-
-                              All
-
-                    </button>
-
-
-                    <button class="category-btn" data-category="electronics">
-
-                              Electronics
-
-                    </button>
-
-
-                    <button class="category-btn" data-category="clothing">
-
-                              Clothing
-
-                    </button>
-
-
-                    <button class="category-btn" data-category="accessories">
-
-                              Accessories
-
-                    </button>
-
+                    <div class="container">
+                              <h3>Shop by Category</h3>
+                              <div class="category-buttons">
+                                        <button class="cat-btn active" data-category="all">All Products</button>
+                                        <button class="cat-btn" data-category="electronics">📱 Electronics</button>
+                                        <button class="cat-btn" data-category="clothing">👕 Clothing</button>
+                                        <button class="cat-btn" data-category="accessories">🕶️ Accessories</button>
+                              </div>
+                    </div>
           </section>
 
-
-
-          <!-- FILTER SECTION -->
-
+          <!-- Filter Section -->
           <section class="filters">
-
-                    <h2>Filter Products</h2>
-
-
-                    <input type="text" id="searchInput" placeholder="Search products...">
-
-
-                    <select id="priceFilter">
-
-                              <option value="all">
-                                        All Prices
-                              </option>
-
-                              <option value="0-1000">
-                                        Below ₹1000
-                              </option>
-
-                              <option value="1001-5000">
-                                        ₹1001 - ₹5000
-                              </option>
-
-                              <option value="5001-20000">
-                                        ₹5001 - ₹20000
-                              </option>
-
-                    </select>
-
+                    <div class="container">
+                              <h3>Filter by Price</h3>
+                              <div class="filter-controls">
+                                        <input type="range" id="price-range" min="0" max="5000" value="5000">
+                                        <span>Max Price: ₹<span id="price-value">5000</span></span>
+                                        <button id="clear-filters" class="clear-btn">Clear Filters</button>
+                              </div>
+                    </div>
           </section>
 
-
-
-          <!-- PRODUCTS SECTION -->
-
+          <!-- Products Grid -->
           <section class="products">
-
-                    <div id="productGrid" class="product-grid">
-
+                    <div class="container">
+                              <h3>Our Products</h3>
+                              <div id="products-grid" class="products-grid">
+                                        <!-- Products will be loaded here by JavaScript -->
+                              </div>
                     </div>
-
           </section>
 
-
-
-          <!-- CART SECTION -->
-
-          <section class="cart-section">
-
-                    <h2>Shopping Cart</h2>
-
-                    <div id="cartItems"></div>
-
-                    <h3 id="cartTotal">
-                              Total: ₹0
-                    </h3>
-
-          </section>
-
-
-
-          <!-- PRODUCT MODAL -->
-
-          <div class="modal" id="productModal">
-
-                    <div class="modal-content">
-
-                              <span class="close-btn" id="closeModal">
-
-                                        &times;
-
-                              </span>
-
-
-                              <img id="modalImage" src="" alt="">
-
-
-                              <h2 id="modalTitle"></h2>
-
-                              <p id="modalCategory"></p>
-
-                              <p id="modalPrice"></p>
-
-                    </div>
-
-          </div>
-
-
-
-          <!-- FOOTER -->
-
+          <!-- Footer -->
           <footer>
-
-                    <p>
-                              © 2026 Medilami Shop. All Rights Reserved.
-                    </p>
-
+                    <div class="container">
+                              <p>&copy; 2026 Medilamishop. All rights reserved.</p>
+                    </div>
           </footer>
 
-
-
           <script src="script.js"></script>
-
 </body>
 
 </html>
